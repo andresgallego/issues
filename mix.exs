@@ -3,21 +3,21 @@ defmodule Issues.MixProject do
 
   def project do
     [
-      app:             :issues,
-      escript:         escript_config(),
-      version:         "0.1.0",
-      name:            "Issues",
-      source_url:      "https://github.com/andresgallego/issues",
-      elixir:          "~> 1.10",
+      app: :issues,
+      escript: escript_config(),
+      version: "0.1.0",
+      name: "Issues",
+      source_url: "https://github.com/andresgallego/issues",
+      elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      test_coverage:   [tool: ExCoveralls],
+      test_coverage: [tool: ExCoveralls],
       preferred_cli_env: [
-        "coveralls": :test,
+        coveralls: :test,
         "coveralls.detail": :test,
         "coveralls.post": :test,
         "coveralls.html": :test
       ],
-      deps:            deps()
+      deps: deps()
     ]
   end
 
