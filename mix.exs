@@ -10,6 +10,13 @@ defmodule Issues.MixProject do
       source_url:      "https://github.com/andresgallego/issues",
       elixir:          "~> 1.10",
       start_permanent: Mix.env() == :prod,
+      test_coverage:   [tool: ExCoveralls],
+      preferred_cli_env: [
+        "coveralls": :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ],
       deps:            deps()
     ]
   end
@@ -27,7 +34,8 @@ defmodule Issues.MixProject do
       {:httpoison, "~> 1.6"},
       {:poison, "~> 4.0"},
       {:ex_doc, "~> 0.21.3"},
-      {:earmark, "~> 1.4"}
+      {:earmark, "~> 1.4"},
+      {:excoveralls, "~> 0.12.2"}
     ]
   end
 
